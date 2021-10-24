@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color1: #fff;
+}
+body{
+    background-color: whitesmoke;
+}
+/*header*/
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #497D11;
+    padding: 12px 0;
+}
+.Logo{
+    background-color: red;
+    width: 100px;
+    position: absolute;
+}
+.Buscador{
+    background-color: blue;
+    width: 200px;
+    position: absolute;
+    left: 400px;
+}
+.Navegacion{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+ul,ol{
+    list-style: none;
+}
+.Navegacion nav li a{
+    position: relative;
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    background-color: rgb(191, 26, 26);
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.ulnav > li{
+    float: left;
+}
+.ulnav li ul{
+    display: none;
+}
+.ulnav li:hover a{
+    background-color: rgb(255, 111, 0);
+    border-radius: 0px;
+}
+.ulnav li:hover > ul{
+    display: block;
+}
+.Navegacion nav li .usuario{
+    background-color: #497D11;
+    padding: 5px 10px;
+}
+.usuario img{
+    width: 30px;
+    height: 30px;
+}
+/*
+.boton-responsive{
+    height: 34px;
+    width: 44px;
+    background-color: var(--color1);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+}
+.boton-responsive:focus{
+    outline: none;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.boton-responsive span{
+    height: 2px;
+    width: 20px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+.boton-responsive span::before,
+.boton-responsive span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+.boton-responsive span::before{
+    transform: translateY(-6px);
+}
+.boton-responsive span::after{
+    transform: translateY(6px);
+}
+*/
+a{
+    text-decoration: none;
+}
+/*carrusel*/
+.contenedor_carrusel{
+    width: 100%;
+    height: 350px;
+    background-color: red;
+}
+/*noticias*/
+
+/*responsive web*/

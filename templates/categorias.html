@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{%load static%}
+{%block estilos%}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}">
+<link rel="stylesheet" href="{% static 'css/categorias.css' %}">
+{%endblock estilos%}
+{%block body%}
+<div class="categorias_lista">
+    <div class="categorias_hijo">
+        <a href="categorias/vaca.html"><img src="media/img/vaca.png" alt=""></a>
+        <a href=""><img src="media/img/toro.png" alt=""></a>
+        <a href=""><img src="media/img/gallina.png" alt=""></a>
+        <a href=""><img src="media/img/gallo.png" alt=""></a>
+        <a href=""><img src="media/img/pez.png" alt=""></a>
+        <a href=""><img src="media/img/pato.png" alt=""></a>
+        <a href=""><img src="media/img/abeja.png" alt=""></a>
+        <a href=""><img src="media/img/cabra.png" alt=""></a>
+        <a href=""><img src="media/img/cerdo.png" alt=""></a>
+        <a href=""><img src="media/img/conejo.png" alt=""></a>
+        <a href=""><img src="media/img/caballo.png" alt=""></a>
+        <a href=""><img src="media/img/obeja.png" alt=""></a>
+    </div>
+</div>
+{% endblock body%}

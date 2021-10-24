@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Inicio</title>
+    {%block estilos%}
+    <link rel="stylesheet" href="{% static 'css/principal.css' %}">
+    {%endblock estilos%}
+</head>
+<body class="fondo">
+{% block header %}
+    <header>
+        <div class="Contenedor">
+            <div class="Logo">
+                <a href="">Logo</a>
+            </div>
+            <div class="Buscador">
+                <input type="text" type="search">
+            </div>
+            <button type="button" class="boton-responsive">
+                <span></span>
+            </button>
+            <div class="Navegacion">
+            <nav class="Menu">
+                <ul class="ulnav">
+                    <li><a href="" class="click-categoria">Categorias</a>
+                    <ul class="categorias">
+                        <li><a href="categorias.html">Animales</a></li>
+                        <li><a href="">Plantas</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="">Proveedores</a></li>
+                    <li><a href="">Informacion</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li><a href="perfil.html">Perfil</a></li>
+                    {%else%}
+                    <li><a href="seccion.html" class="usuario"><img src="media/img/usuario.png" alt=""></a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    {% endblock header %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="notificacion {{message.tags}}">
+            {{ message }}
+        </div>
+        {%endfor%}
+    {% endif %}
+    {%block body%}
+    <div class="contenedor_carrusel">
+        <div class="carrusel">
+            <button aria-label="Anterior" class="boton_anterior"><img src="media/img/flecha-anterior.png" alt=""></button>
+            <div class="lista_carrusel">
+                <div class="elemento_carrusel"></div>
+                <div class="elemento_carrusel"></div>
+                <div class="elemento_carrusel"></div>
+            </div>
+            <button aria-label="Siguiente" class="boton_siguiente"><img src="media/img/flecha-correcta.png" alt=""></button>
+        </div>
+    </div>
+    {%endblock body%}
+<!--Scripts-->
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+</body>
+</html>

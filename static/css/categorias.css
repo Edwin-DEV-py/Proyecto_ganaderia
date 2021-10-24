@@ -1,0 +1,16 @@
+.categorias_lista{
+    width: 80%;
+    height: 100%;
+    position: relative;
+    left: 10%;
+    right: 10%;
+    top: 50px;
+}
+.categorias_hijo{
+    width: 100%;
+    height: 100%;
+}
+a img{
+    width: 180px;
+    margin: 10px 40px;
+}

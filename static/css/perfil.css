@@ -1,0 +1,12 @@
+.principal{
+    position: relative;
+    top: 30%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.principal div{
+    margin: 20px;
+    background: yellow;
+}

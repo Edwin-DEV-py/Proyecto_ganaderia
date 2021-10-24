@@ -1,0 +1,17 @@
+logo{
+    align-items: center;
+}
+hr{
+    position: relative;
+    top: 100px;
+}
+.iniciar_seccion{
+    width: 200px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+}

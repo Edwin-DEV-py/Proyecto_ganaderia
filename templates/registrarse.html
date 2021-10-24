@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% load widget_tweaks%}
+{% load static %}
+{%block estilos%}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}">
+<link rel="stylesheet" href="{% static 'css/registrarse.css' %}">
+{%endblock estilos%}
+{% block body %}
+{% block header %}
+{% endblock header %}
+<div class="Logo">
+    <img src="" alt="">
+</div>
+<hr>
+<div class="contenedor">
+    <div class="caja_formulario">
+        <div class="botones_caja">
+            <h1>Registrate</h1>
+        </div>
+        <form id="Cliente" class="grupo_input" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="boton_registrar">registrar</button>
+        </form>
+    </div>
+</div>
+<script>
+var x = document.getElementById("Cliente");
+var z = document.getElementById("elegir");
+</script>
+{% endblock body %}

@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load widget_tweaks%}
+{% load static %}
+{%block estilos%}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}">
+<link rel="stylesheet" href="{% static 'css/registrarse.css' %}">
+{%endblock estilos%}
+{% block body %}
+{% block header %}
+{% endblock header %}
+<div class="Logo">
+    <img src="" alt="">
+</div>
+<hr>
+<div class="contenedor">
+    <div class="caja_formulario">
+        <div class="botones_caja">
+            <h1>Inicia sesion</h1>
+        </div>
+        <form id="Iniciar_sesion" class="grupo_input" method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="boton_registrar">Iniciar sesion</button>
+        </form>
+    </div>
+</div>
+{% endblock body %}

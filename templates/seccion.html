@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{%load static%}
+{%block estilos%}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}">
+<link rel="stylesheet" href="{% static 'css/seccion.css' %}">
+{%endblock estilos%}
+{%block body%}
+<div class="anuncio">
+
+</div>
+<div class="inicio_seccion">
+    <a href="iniciar_seccion.html"><input type="submit" value="Iniciar-seccion"></a>
+    <a href="registrarse.html"><input type="submit" value="Registrarse"></a>
+</div>
+{% endblock body %}

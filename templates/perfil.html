@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{%load static%}
+{%block estilos%}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}">
+<link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+{%endblock estilos%}
+{% block body %}
+<div class="principal">
+<div><a href="logout.html">cerrar sesion</a></div>
+<div><a href="post.html">Añadir post</a></div>
+<div></div>
+{% endblock body %}
