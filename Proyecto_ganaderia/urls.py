@@ -23,6 +23,7 @@ from django.contrib.auth.views import LoginView,LogoutView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',inicio,name='index'),
+    path('index.html',inicio,name="inicio"),
     path('categorias.html',categorias,name='categorias'),
     path('seccion.html',seccion,name='seccion'),
     path('iniciar_seccion.html',LoginView.as_view(template_name="iniciar_seccion.html"),name="iniciar_seccion"),

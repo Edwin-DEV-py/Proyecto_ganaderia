@@ -1,12 +1,17 @@
 from django.shortcuts import get_object_or_404, render,redirect
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from .forms import Formulario_registro_usuario, PostForm
+from .forms import Formulario_registro_usuario, PostForm, PublicacionForm
 from .models import *
 from .forms import Formulario_registro_usuario
 from django.contrib import messages
 
 def inicio(request):
-    return render(request,'index.html')
+    publicaciones = Publicacion.objects.all()
+    contexto = {'publicaciones':publicaciones}
+    data = {
+        'publicaciones':Publicacion.objects.all()
+    }
+    return render(request,'index.html',contexto)
 
 def categorias(request):
     return render(request,'categorias.html')
@@ -34,16 +39,15 @@ def perfil(request):
     return render(request,'perfil.html')
 
 def post(request):
-    current_user = get_object_or_404(User, pk=request.user.pk)
-    if request.method == 'POST':
-        form = PostForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.user = current_user
-            post.save()
-            messages.success(request, 'Post hecho')
-            return redirect('index.html')
+    if request.method == 'GET':
+        form = PublicacionForm()
+        contexto = {'form':form}
     else:
-        form = PostForm()
-    return render(request,'post.html',{'form':form})
+        form = PublicacionForm(request.POST)
+        contexto = {'form':form}
+    if form.is_valid():
+        form.save()
+        messages.success(request, 'Post hecho')
+        return redirect('index.html')
+    return render(request,'post.html',contexto)
 # Create your views here.

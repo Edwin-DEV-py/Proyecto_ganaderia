@@ -11,22 +11,25 @@ body{
     font-family: sans-serif;
 }
 .inicio_seccion{
-    width: 200px;
+    width: 150px;
     padding: 40px;
     position: absolute;
     top: 60%;
     left: 65%;
     transform: translate(-50%,-50%);
-    background: #191919;
+    background: #087937;
     text-align: center;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 9px #9cff12;
 }
 .inicio_seccion input[type="submit"]{
     border: 0;
     background: none;
     display: block;
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
-    border: 2px solid #3498db;
+    border: 2px solid #34db50;
     padding: 14px 10px;
     outline: none;
     color: white;

@@ -66,10 +66,12 @@ hr{
     cursor: pointer;
     display: block;
     margin: auto;
-    background: blue;
+    background: rgb(0, 255, 128);
     outline: none;
     border: 0;
     border-radius: 30px ;
+    color:white;
+    font-style:inherit;
 }
 #proveedor{
     left: 450px;

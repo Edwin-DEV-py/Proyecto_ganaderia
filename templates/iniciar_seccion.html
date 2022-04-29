@@ -19,7 +19,8 @@
         </div>
         <form id="Iniciar_sesion" class="grupo_input" method="post">
             {% csrf_token %}
-            {{form}}
+            {% render_field form.username class="texto_input" placeholder="Nombre"%}
+            {% render_field form.password class="texto_input" placeholder="Contraseña"%}
             <button type="submit" class="boton_registrar">Iniciar sesion</button>
         </form>
     </div>

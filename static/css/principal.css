@@ -15,9 +15,8 @@ header{
     background-color: #497D11;
     padding: 12px 0;
 }
-.Logo{
-    background-color: red;
-    width: 100px;
+.Logo img{
+    width: 200px;
     position: absolute;
 }
 .Buscador{

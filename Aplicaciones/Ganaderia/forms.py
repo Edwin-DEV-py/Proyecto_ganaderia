@@ -23,3 +23,8 @@ class PostForm(forms.ModelForm):
     class Meta:
         model=Post
         fields=['contenido']
+
+class PublicacionForm(forms.ModelForm):
+    class Meta:
+        model = Publicacion
+        fields = ['animal','Sexo','Anos','image']

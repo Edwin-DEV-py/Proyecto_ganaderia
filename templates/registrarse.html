@@ -19,8 +19,12 @@
         </div>
         <form id="Cliente" class="grupo_input" method="post">
             {% csrf_token %}
-            {{form.as_p}}
-            <button type="submit" class="boton_registrar">registrar</button>
+            {% render_field form.username class="texto_input" placeholder="Nombre"%}
+            {% render_field form.last_name class="texto_input" placeholder="Apellido"%}
+            {% render_field form.email class="texto_input" placeholder="Correo"%}
+            {% render_field form.password1 class="texto_input" placeholder="Contraseña"%}
+            {% render_field form.password2 class="texto_input" placeholder="Repetir contraseña"%}
+            <button type="submit" class="boton_registrar"><b>registrar</b></button>
         </form>
     </div>
 </div>
